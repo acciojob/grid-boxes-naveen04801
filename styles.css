@@ -1,1 +1,37 @@
 /*  your css code here. If applicable */
+#parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px;
+  gap: 10px;
+  background-color: white;
+}
+
+.item {
+  background-color: #008001;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+/* Row 1: full width */
+.one { grid-column: 1 / 5; }
+
+/* Left column, spans rows 2-5 */
+.two { grid-column: 1; grid-row: 2 / 6; }
+
+/* Row 2 */
+.three { grid-column: 2; }
+.four  { grid-column: 3 / 5; }
+
+/* Row 3 */
+.five { grid-column: 2 / 4; }
+.six  { grid-column: 4; }
+
+/* Row 4 */
+.seven { grid-column: 2; }
+.eight { grid-column: 3; }
+.nine  { grid-column: 4; }
+
+/* Row 5: spans cols 2-4 */
+.ten { grid-column: 2 / 5; }
